@@ -4,4 +4,4 @@ music how rad
 ---
 
 - [x] find music
-- [] find sound effects
+- [x] find sound effects
