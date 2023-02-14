@@ -14,23 +14,9 @@ Boolean firstMouseclick=false;
 //
 void setup() {
   size(300, 300);
-  minim = new Minim(this);
-  song0 = minim.loadFile("../Music/Friday Theme (Crunchy).mp3");
-  song1 = minim.loadFile("../Music/Sticky Clingy -Talkshow boy-Peristoika Love.mp3");
-  song2 = minim.loadFile("../Music/Talkshow Boy - You Name It, I'll Eat It (Bring The Hate Like An 808).mp3");
-  song3 = minim.loadFile("../Music/Talkshow Boy - Ice Police.mp3");
-  song4 = minim.loadFile("../Music/Talkshow Boy - Ruff Lovin' In A Tuff Neighbourhood.mp3");
-  song5 = minim.loadFile("../Music/fry me in a pan - talkshow boy.mp3");
-  song6 = minim.loadFile("../Music/Talkshow Boy - I Know A Girl Who Spots Foxes.mp3");
-  song7 = minim.loadFile("../Music/Talkshow Boy - We Make A Beeline To The Auditorium.mp3");
-  song8 = minim.loadFile("../Music/Talkshow Boy - Watch As I Perform My Own Tracheotomy.mp3");
-  song9 = minim.loadFile("../Music/Fall Fair Suite.mp3");
-  song10 = minim.loadFile("../Music/NIGHTCORE - TALKSHOW BOY - GETTING YOUR HEART BROKEN IS WAY COOL.mp3");
-  song11 = minim.loadFile("../Music/All The Food is Poison  Tim and Eric Awesome Show, Great Job!  Adult Swim.mp3");
-  song12 = minim.loadFile("../Music/Lemon Demon - Ivanushka (Touch-Tone Telephone, 2009).mp3");
-  soundEffect0 = minim.loadFile("../soundeffect/Anime wow - sound effect (free to use).mp3");
-  soundEffect1 = minim.loadFile("../soundeffect/Bro what the hell bro-Meme- Sound Effect.mp3");
+  LoadMusic ();
   //song0.loop(0);
+  //soundEffect0.loop(0)
 } //End setup
 //
 void draw() {
@@ -39,6 +25,7 @@ void draw() {
 //
 void keyPressed() {
   //
+  if (key=='0' ) song0.loop(0);
  if ( key=='Q' || key=='q') exit();
  if ( key==CODED && key==ESC) exit();
   //
