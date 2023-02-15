@@ -10,7 +10,7 @@ Minim minim;
 AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12;
 AudioPlayer soundEffect0, soundEffect1;
 //
-Boolean firstMouseclick=false;
+Boolean tabselect=false;
 //
 void setup() {
   size(300, 300);
@@ -20,21 +20,30 @@ void setup() {
 } //End setup
 //
 void draw() {
- if (firstMouseclick == true) background(0);
+ if (tabselect == true) background(0);
+ println(soundEffect1.position(), soundEffect1.length() );
 } //End draw
 //
 void keyPressed() {
   //
-  if (key=='0' ) song0.loop(0);
- if ( key=='Q' || key=='q') exit();
- if ( key==CODED && key==ESC) exit();
+  soundEffect0.play();
+  soundEffect0.rewind();
+  delay(3000);
+ keyPressedShortCuts();
+ if ( key=='Q' || key=='q') {
+   soundEffect1.play();
+   soundEffect1.rewind();
+   delay(1500);
+   exit();
+ }
+
   //
 soundEffect0.play();
 } //End keyPressed
 //
 void mousePressed() {
  soundEffect0.rewind();
- if ( firstMouseclick==false ) firstMouseclick = true;
+ if ( tabselect==false ) tabselect = true;
  } //End mousePressed
 //
 //End MAIN Program
