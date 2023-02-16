@@ -25,3 +25,6 @@ void LoadMusic (){
   soundEffect0 = minim.loadFile(soundpath + wow);
   soundEffect1 = minim.loadFile(soundpath + bro);
 }//end LoadMusic
+
+//secret messages how cool :3
+//have a nice day!! ~(^-^)~

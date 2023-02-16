@@ -30,12 +30,6 @@ void keyPressed() {
   soundEffect0.rewind();
   delay(3000);
  keyPressedShortCuts();
- if ( key=='Q' || key=='q') {
-   soundEffect1.play();
-   soundEffect1.rewind();
-   delay(1500);
-   exit();
- }
 
   //
 soundEffect0.play();
