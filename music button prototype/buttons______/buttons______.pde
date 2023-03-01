@@ -1,8 +1,10 @@
 //global variables
 //
+PImage img;
 void setup(){
   //display
   size(700,500);
+  img = loadImage("j.jpg");
   //visual stuff
 }//end of setup
 //
@@ -18,15 +20,13 @@ void draw(){
   //spaces are (70,100)
   //rect(x, y, width, height);//layout
   //
-  //stop button
-  //rect(x, y, width, height);
-  //rect(x, y, width, height);
+  img = loadImage ("stop.png");
+  image(img, 445,300);
   //
-  //play button and pause
-  rect(280,350, 140,100);
-  triangle( 310, 370,350,370, 320,370);
-  //rect(x, y, width, height);
-  //rect(x, y, width, height);
+  img = loadImage ("j.png");
+  image(img, 275, 300);
+  String pp = "j.png";
+  //pause play button
   //
   //MUTE button
   //rect( x, y, width, height);
@@ -82,6 +82,7 @@ void keyPressed() {
 } //End keyPressed
 //
 void mousePressed() {
+  
 } //End mousePressed
 //
 //End MAIN Program
