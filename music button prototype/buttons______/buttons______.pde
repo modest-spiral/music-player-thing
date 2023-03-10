@@ -4,7 +4,8 @@ PImage img;
 void setup(){
   //display
   size(700,500);
-  img = loadImage("j.jpg");
+  img = loadImage("background actual.png");
+  image(img, 0, 0);
   //visual stuff
 }//end of setup
 //
@@ -19,38 +20,32 @@ void draw(){
   //spaces are half a button
   //spaces are (70,100)
   //rect(x, y, width, height);//layout
+  rect(50, 175, 600, 300);
+  rect(75, 200, 140, 100);
   //
+   rect(475, 200, 140, 100);
   img = loadImage ("stop.png");
-  image(img, 445,300);
+  image(img, 475,350);
   //
-  img = loadImage ("j.png");
-  image(img, 275, 300);
-  String pp = "j.png";
+  rect(275, 350, 140, 100);
+  img = loadImage ("pauseplay.png");
+  image(img, 275, 350);
   //pause play button
   //
+   rect(275, 200, 140, 100);
+  img = loadImage ("mute.png");
+  image(img, 275, 200);
   //MUTE button
   //rect( x, y, width, height);
   //
-  //fast Forward in the Song
-  //rect( X, Y, Width, Height ); //Layout
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //
-  //Reverse in the Song
-  //rect( X, Y, Width, Height ); //Layout
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //
-  //Next Button, skip file
-  //rect( X, Y, Width, Height ); //Layout
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //rect( X, Y, Width, Height );
-  //
-  //Previous Button
-  //rect( X, Y, Width, Height ); //Layout
-  //rect( X, Y, Width, Height );
-  //triangle( X1, Y1, X2, Y2, X3, Y3 );
-  //
+   rect(475, 350, 140, 100);
+  img = loadImage ("fastforward.png");
+  image(img, 475, 350);
+//
+ rect(75, 350, 140, 100);
+img = loadImage ("rewind.png");
+image(img, 75, 350);
+//rewind
   //Loop the Song Once
   //Students to Develop
   //rect( X, Y, Width, Height ); //Layout
