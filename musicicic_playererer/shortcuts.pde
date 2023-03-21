@@ -17,7 +17,8 @@ void musicShortCuts(){
   if (key=='8') song7.loop(0);
   if (key=='9') song8.loop(0);
   //
-  if ( key == 'P' || key=='p' ) autoPlay();
+  if ( key == 'U' || key=='u' ) autoplay();
+  if ( key == 'P' || key=='p' ) playpause();
   if ( key == 'M' || key=='m' ) mute();
   if ( key == 'S' || key=='s' ) stopSong();
   if ( key == 'F' || key=='f' ) fastForward();
@@ -29,7 +30,6 @@ void musicShortCuts(){
   if ( key == 'W' || key=='w' ) shufflePlaylist(); //shuffle
   if ( key == 'E' || key=='e' ) loopAndShuffle(); //Loop and Shuffle
   //forgive the copy paste, my laptop died halfway through this
-}
 }// end of music shortcuts
 //
 void quitButton() {
@@ -54,12 +54,36 @@ if (song0.isMuted()) {
    } else if ( song0.position() >= song0.length()*4/5 ) {} else {
      song0.rewind();
      song0.unmute();
-   } else {
-     song0.mute();
+    } if else {
+     song0.Mute(); 
    }
-void stopSong() {};
-void fastForward() {};
-void fastRewind() {};
+void stopSong() {
+  //
+if ( song0.isPlaying() ) {
+  .pause();
+  .rewind();
+ } else {
+   song0.rewind();
+ }
+//
+}
+void autoPlay() {
+  
+}
+void playpause() {
+  if (song0.isPlaying()) {
+    song0.pause();
+  } else if ( song0.position() >= song0.length()*4/5) {
+  } else {
+  song0.play();
+  }
+};
+void fastForward() {
+  if ( song0.isPlaying() ) song0.skip(5000) ;
+};
+void fastRewind(song0.isPlaying() ) song0.skip(-5000) {
+  if () ;
+};
 void nextSong() {};
 void previousSong() {};
 void loopSong() {};
