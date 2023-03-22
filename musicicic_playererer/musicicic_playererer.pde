@@ -7,8 +7,11 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;
-AudioPlayer song0, song1, song2, song3, song4, song5, song6, song7, song8, song9, song10, song11, song12;
-AudioPlayer soundEffect0, soundEffect1;
+int numberOfSongs = 9;
+AudioPlayer[] songs = new  AudioPlayer[numberOfSongs]; //wowwow playlist data stuff
+int numberOfSoundEffects = 2;
+AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
+int currentSong = int ( random( numberOfSongs-1 ) );
 //
 int time = 7000;
 //
@@ -23,22 +26,22 @@ void setup() {
 //
 void draw() {
  if (tabselect == true) background(0);
- println(soundEffect1.position(), soundEffect1.length() );
+ println(soundEffects[1].position(), soundEffects[1].length() );
 } //End draw
 //
 void keyPressed() {
   //
-  soundEffect0.play();
-  soundEffect0.rewind();
+  soundEffects[0].play();
+  soundEffects[0].rewind();
   delay(3000);
  keyPressedShortCuts();
 
   //
-soundEffect0.play();
+soundEffects[0].play();
 } //End keyPressed
 //
 void mousePressed() {
- soundEffect0.rewind();
+ soundEffects[0].rewind();
  if ( tabselect==false ) tabselect = true;
  } //End mousePressed
 //

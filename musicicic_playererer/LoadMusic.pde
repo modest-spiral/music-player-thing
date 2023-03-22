@@ -13,17 +13,17 @@ void LoadMusic (){
     String soundpath = "../soundeffect/";
     String wow = "Anime wow - sound effect (free to use).mp3";
     String bro = "Bro what the hell bro-Meme- Sound Effect.mp3";
- song0 = minim.loadFile(musicpath + chop);
-  song1 = minim.loadFile(musicpath + stick);
-  song2 = minim.loadFile(musicpath + eat);
-  song3 = minim.loadFile(musicpath + icepo);
-  song4 = minim.loadFile(musicpath + ruff);
-  song5 = minim.loadFile(musicpath + fry);
-  song6 = minim.loadFile(musicpath + fox);
-  song7 = minim.loadFile(musicpath + bee);
-  song8 = minim.loadFile(musicpath + trach);
-  soundEffect0 = minim.loadFile(soundpath + wow);
-  soundEffect1 = minim.loadFile(soundpath + bro);
+ songs[0] = minim.loadFile(musicpath + chop);
+  songs[1] = minim.loadFile(musicpath + stick);
+  songs[2] = minim.loadFile(musicpath + eat);
+  songs[3] = minim.loadFile(musicpath + icepo);
+  songs[4] = minim.loadFile(musicpath + ruff);
+  songs[5] = minim.loadFile(musicpath + fry);
+  songs[6] = minim.loadFile(musicpath + fox);
+  songs[7] = minim.loadFile(musicpath + bee);
+  songs[8] = minim.loadFile(musicpath + trach);
+  soundEffects[0] = minim.loadFile(soundpath + wow);
+  soundEffects[1] = minim.loadFile(soundpath + bro);
 }//end LoadMusic
 
 //secret messages how cool :3

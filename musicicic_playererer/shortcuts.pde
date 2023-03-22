@@ -7,17 +7,17 @@ quitButton();
 }//end keypressed
 
 void musicShortCuts(){
- if (key=='1' ) song0.loop(0);
-  if (key=='2' ) song1.loop(0);
-  if (key=='3' ) song2.loop(0);
-  if (key=='4' ) song3.loop(0);
-  if (key=='5' ) song4.loop(0);
-  if (key=='6') song5.loop(0);
-  if (key=='7') song6.loop(0);
-  if (key=='8') song7.loop(0);
-  if (key=='9') song8.loop(0);
+ if (key=='1' ) songs[0].loop(0);
+  if (key=='2' ) songs[1].loop(0);
+  if (key=='3' ) songs[2].loop(0);
+  if (key=='4' ) songs[3].loop(0);
+  if (key=='5' ) songs[4].loop(0);
+  if (key=='6') songs[5].loop(0);
+  if (key=='7') songs[6].loop(0);
+  if (key=='8') songs[7].loop(0);
+  if (key=='9') songs[8].loop(0);
   //
-  if ( key == 'U' || key=='u' ) autoplay();
+  if ( key == 'U' || key=='u' ) autoPlay();
   if ( key == 'P' || key=='p' ) playpause();
   if ( key == 'M' || key=='m' ) mute();
   if ( key == 'S' || key=='s' ) stopSong();
@@ -42,47 +42,44 @@ void quitButton() {
 
 }
  void quitbuttoncode() {
-     soundEffect1.play();
-   soundEffect1.rewind();
+     soundEffects[1].play();
+   soundEffects[1].rewind();
    delay(1500);
    exit();
  }//end of quit button
 void autoPlay() {};
 void mute() {
-if (song0.isMuted()) {
-     song0.unmute();
-   } else if ( song0.position() >= song0.length()*4/5 ) {} else {
-     song0.rewind();
-     song0.unmute();
-    } if else {
-     song0.Mute(); 
-   }
-void stopSong() {
-  //
-if ( song0.isPlaying() ) {
-  .pause();
-  .rewind();
- } else {
-   song0.rewind();
- }
-//
+  if ( songs[currentSong].isMuted() ) {
+    songs[currentSong].unmute();
+  } else if ( songs[currentSong].isMuted() && songs[currentSong].position() >= songs[currentSong].length()*4/5 ) {
+    songs[currentSong].rewind(); //one solution
+    songs[currentSong].unmute();
+  } else {
+    songs[currentSong].mute(); 
+  }
 }
-void autoPlay() {
-  
+void stopSong() 
+{
+ if ( songs[currentSong].isPlaying() ) {
+    songs[currentSong].pause();
+    songs[currentSong].rewind();
+  } else {
+    songs[currentSong].rewind();
+  }
 }
 void playpause() {
-  if (song0.isPlaying()) {
-    song0.pause();
-  } else if ( song0.position() >= song0.length()*4/5) {
+  if (songs[currentSong].isPlaying()) {
+    songs[currentSong].pause();
+  } else if ( songs[currentSong].position() >= songs[currentSong].length()*4/5) {
   } else {
-  song0.play();
+  songs[currentSong].play();
   }
 };
 void fastForward() {
-  if ( song0.isPlaying() ) song0.skip(5000) ;
+  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(5000) ;
 };
-void fastRewind(song0.isPlaying() ) song0.skip(-5000) {
-  if () ;
+void fastRewind() {
+  if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(-2500) ;
 };
 void nextSong() {};
 void previousSong() {};
@@ -90,5 +87,4 @@ void loopSong() {};
 void loopPlaylist() {}; 
 void shufflePlaylist() {}; 
 void loopAndShuffle() {};
-}
 //end keyboard shortcuts sub program
