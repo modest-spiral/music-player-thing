@@ -81,7 +81,21 @@ void fastForward() {
 void fastRewind() {
   if ( songs[currentSong].isPlaying() ) songs[currentSong].skip(-2500) ;
 };
-void nextSong() {};
+void nextSong() {
+   if ( songs[currentSong].isPlaying() ) {
+    //Students to finish
+    //Current Song: .pause(), .rewind()
+    //Next Song: currentSong++
+    //Now: DELAY-1-Second, .play()
+  } else if (currentSong >= songs.length-1 ) {
+    currentSong = 0;
+  } else {
+    songs[currentSong].rewind();
+    currentSong++;
+  }
+
+};
+
 void previousSong() {};
 void loopSong() {};
 void loopPlaylist() {}; 
