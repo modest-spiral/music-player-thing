@@ -31,7 +31,12 @@ void draw() {
    if (tabselect == true) {
       img = loadImage("desktop-wallpaper-dark-aesthetic-iphone-design-black-aesthetic-high-resolution-thumbnail.jpg");
         image(img, 0, 0);
-        rect(0, 0, 100, 100);
+        rect(125, 400, 100, 100);
+        rect(25, 400, 100, 100);
+        rect(225, 400, 100, 100);
+        rect(125, 500, 100, 100);
+        rect(25, 500, 100, 100);
+        rect(225, 500, 100, 100);
    }
 
   

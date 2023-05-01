@@ -1,6 +1,6 @@
 void LoadMusic () {
   minim = new Minim(this);
-  String tomusic = "../music";
+  String tomusic = "../../music";
   String chop = "Talkshow Boy - Chop Us Out.mp3";
   String stick = "Sticky Clingy -Talkshow boy-Peristoika Love.mp3";
   String eat = "Talkshow Boy - You Name It, I'll Eat It (Bring The Hate Like An 808).mp3";
