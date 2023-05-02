@@ -46,10 +46,52 @@ void keyPressed() {
   if (key ==  'q') {
     exit();
   }
+  if (key == '1') {
+    songs[0].play();
+    songs[0].rewind();
+  }
+  if (key == '2') {
+        songs[1].play();
+    songs[1].rewind();
+  }
+  if (key == '3') {
+        songs[2].play();
+    songs[2].rewind();
+  }
+  if (key == '4') {
+        songs[3].play();
+    songs[3].rewind();
+  }
+  if (key == '5'){
+        songs[4].play();
+    songs[4].rewind();
+  }
+  if (key == '6') {
+        songs[5].play();
+    songs[5].rewind();
+  }
+  if (key == '7') {
+        songs[6].play();
+    songs[6].rewind();
+  }
+  if (key == '8') {
+        songs[7].play();
+    songs[7].rewind();
+  }
+  if (key == '9') {
+        songs[8].play();
+    songs[8].rewind();
+  }
+  //songs
   
+  
+ if (key == CODED || keyCode == SPACE) {
+  }
 }
 
 void mousePressed() {
   
   if ( tabselect==false ) tabselect = true;
 }
+
+//i am typing aggressively in spite of my friend jhsfjhgsfjkidhhijsgfhkfsdihusfbsjpsadgko[afdajkfdiu0i
