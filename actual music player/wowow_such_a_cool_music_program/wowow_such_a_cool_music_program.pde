@@ -13,6 +13,7 @@ int numberOfSongs = 9; //thats a variable
 AudioPlayer[] songs = new  AudioPlayer[numberOfSongs]; //wowwow playlist data stuff
 AudioMetaData songMetaData1; //metadata basically just loading the actual data of the song
 Boolean tabselect=false;
+Boolean musicplaying=false;
 
 //okay window set up stuff
 PImage img;
@@ -48,35 +49,51 @@ void keyPressed() {
   }
   if (key == '1') {
     songs[0].play();
+    musicplaying=true;
     songs[0].rewind();
+    musicplaying=false;
   }
   if (key == '2') {
         songs[1].play();
+        musicplaying=true;
     songs[1].rewind();
+    musicplaying=false;
   }
   if (key == '3') {
         songs[2].play();
+        musicplaying=true;
     songs[2].rewind();
+    musicplaying=false;
   }
   if (key == '4') {
         songs[3].play();
+        musicplaying=true;
     songs[3].rewind();
+    musicplaying=false;
   }
   if (key == '5'){
         songs[4].play();
+        musicplaying=true;
     songs[4].rewind();
+    musicplaying=false;
   }
   if (key == '6') {
         songs[5].play();
+        musicplaying=true;
     songs[5].rewind();
+    musicplaying=false;
   }
   if (key == '7') {
         songs[6].play();
+        musicplaying=true;
     songs[6].rewind();
+    musicplaying=false;
   }
   if (key == '8') {
         songs[7].play();
+        musicplaying=true;
     songs[7].rewind();
+    musicplaying=false;
   }
   if (key == '9') {
         songs[8].play();
@@ -85,7 +102,8 @@ void keyPressed() {
   //songs
   
   
- if (key == CODED || keyCode == SPACE) {
+ if (key == CODED || keyCode == SHIFT) {
+   if (
   }
 }
 
