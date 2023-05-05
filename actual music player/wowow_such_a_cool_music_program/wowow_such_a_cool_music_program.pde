@@ -14,6 +14,7 @@ AudioPlayer[] songs = new  AudioPlayer[numberOfSongs]; //wowwow playlist data st
 AudioMetaData songMetaData1; //metadata basically just loading the actual data of the song
 Boolean tabselect=false;
 Boolean musicplaying=false;
+songs[int] = songs
 
 //okay window set up stuff
 PImage img;
@@ -103,7 +104,9 @@ void keyPressed() {
   
   
  if (key == CODED || keyCode == SHIFT) {
-   if (
+   if (songs.isplaying()){
+     songs.pause();
+   }
   }
 }
 
