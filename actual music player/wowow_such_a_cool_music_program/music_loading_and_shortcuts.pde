@@ -9,7 +9,7 @@ void LoadMusic () {
   String fox = "Talkshow Boy - I Know A Girl Who Spots Foxes.mp3";
   String bee = "Talkshow Boy - We Make A Beeline To The Auditorium.mp3";
   String trach = "Talkshow Boy - Watch As I Perform My Own Tracheotomy.mp3";
-  songs[0] = minim.loadFile(chop);
+  songs[1] = minim.loadFile(chop);
   songs[1] = minim.loadFile(stick);
   songs[2] = minim.loadFile(eat);
   songs[3] = minim.loadFile(icepo);
