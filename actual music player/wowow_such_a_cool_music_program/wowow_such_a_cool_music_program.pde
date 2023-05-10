@@ -7,6 +7,8 @@ import ddf.minim.ugens.*;
 
 //okay gonna make notes to myself good luck to whoever reads this aaaaaaaaaaaa ok
 
+//apologies for the lack of actual updates im sleep deprived and depressed i mean what no im not im just a silly little guy/hj/lh
+
 //global variables i guess
 Minim minim; //makes minim actually load
 int numberOfSongs = 9; //thats a variable
