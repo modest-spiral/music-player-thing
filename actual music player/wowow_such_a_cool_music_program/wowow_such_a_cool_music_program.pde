@@ -4,116 +4,58 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+//
+//Global Variables
+Minim minim;
+int numberOfSongs = 9;
 
-//okay gonna make notes to myself good luck to whoever reads this aaaaaaaaaaaa ok
-
-//apologies for the lack of actual updates im sleep deprived and depressed i mean what no im not im just a silly little guy/hj/lh
-
-//global variables i guess
-Minim minim; //makes minim actually load
-int numberOfSongs = 9; //thats a variable
-AudioPlayer[] songs = new  AudioPlayer[numberOfSongs]; //wowwow playlist data stuff
-AudioMetaData songMetaData1; //metadata basically just loading the actual data of the song
+int numberOfSoundEffects = 2;
+AudioPlayer[] soundEffects = new AudioPlayer[numberOfSoundEffects];
+int currentSong = int ( random( numberOfSongs-1 ) );
+int songs;
+AudioMetaData songMetaData1; //"Song Meta One"
+//
+int time = 7000;
+//
 Boolean tabselect=false;
-Boolean musicplaying=false;
-
-//okay window set up stuff
-PImage img;
-
-void setup(){
-  size (350, 622);
+//
+void setup() {
+  size(300, 300);
   LoadMusic ();
-  minim = new Minim(this); //gotta gather the data
-  //visual stuff
-}
 
+  minim = new Minim(this);
+songMetaData1 = songs[].getMetaData();
+} //End setup
+//
 void draw() {
-  if (tabselect == false) {
-    background(0);
-  }
-   if (tabselect == true) {
-      img = loadImage("desktop-wallpaper-dark-aesthetic-iphone-design-black-aesthetic-high-resolution-thumbnail.jpg");
-        image(img, 0, 0);
-        rect(125, 400, 100, 100);
-        rect(25, 400, 100, 100);
-        rect(225, 400, 100, 100);
-        rect(125, 500, 100, 100);
-        rect(25, 500, 100, 100);
-        rect(225, 500, 100, 100);
-   }
+ if (tabselect == true) background(0);
 
-  
-}
-
+} //End draw
+//
 void keyPressed() {
-  if (key ==  'q') {
-    exit();
-  }
-  if (key == '1') {
-    songs[0].play();
-    musicplaying=true;
-    songs[0].rewind();
-    musicplaying=false;
-  }
-  if (key == '2') {
-        songs[1].play();
-        musicplaying=true;
-    songs[1].rewind();
-    musicplaying=false;
-  }
-  if (key == '3') {
-        songs[2].play();
-        musicplaying=true;
-    songs[2].rewind();
-    musicplaying=false;
-  }
-  if (key == '4') {
-        songs[3].play();
-        musicplaying=true;
-    songs[3].rewind();
-    musicplaying=false;
-  }
-  if (key == '5'){
-        songs[4].play();
-        musicplaying=true;
-    songs[4].rewind();
-    musicplaying=false;
-  }
-  if (key == '6') {
-        songs[5].play();
-        musicplaying=true;
-    songs[5].rewind();
-    musicplaying=false;
-  }
-  if (key == '7') {
-        songs[6].play();
-        musicplaying=true;
-    songs[6].rewind();
-    musicplaying=false;
-  }
-  if (key == '8') {
-        songs[7].play();
-        musicplaying=true;
-    songs[7].rewind();
-    musicplaying=false;
-  }
-  if (key == '9') {
-        songs[8].play();
-    songs[8].rewind();
-  }
-  //songs
-  
-  
- if (key == CODED || keyCode == SHIFT) {
-   if (songs.isplaying()){
-     songs.pause();
-   }
-  }
-}
+  //
+  soundEffects[0].play();
+  soundEffects[0].rewind();
+  delay(3000);
+ keyPressedShortCuts();
 
+  //
+soundEffects[0].play();
+  if (key == 'p' || key == 'P') {
+    if ( songs.isPlaying() ) {
+      songs.pause();
+    } else if ( songs.position() >= songs.length()-2000 ) {
+      songs.rewind();
+      songs.play();
+    } else {
+      songs.play();
+    }
+  }
+} //End keyPressed
+//
 void mousePressed() {
-  
-  if ( tabselect==false ) tabselect = true;
-}
-
-//i am typing aggressively in spite of my friend jhsfjhgsfjkidhhijsgfhkfsdihusfbsjpsadgko[afdajkfdiu0i
+ soundEffects[0].rewind();
+ if ( tabselect==false ) tabselect = true;
+ } //End mousePressed
+//
+//End MAIN Program
